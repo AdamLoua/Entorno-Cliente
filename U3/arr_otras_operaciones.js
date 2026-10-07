@@ -49,6 +49,7 @@ console.log(arr1.lastIndexOf(4)); //el ultimo
 
 
 let orden = [3,5,7,10,22];
+//falta
 
 
 
