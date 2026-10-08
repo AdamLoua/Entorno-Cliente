@@ -45,5 +45,3 @@ console.log(`el resultado de sumar los elemntos del array es ${resul}`);
 
 let resulpar = numeros_a_sumar.reduce((acu, elem) => elem%2 === 0 ? acu + elem : acu + 0,0);
 console.log(`el resultado de sumar los elemntos pares del array es ${resulpar}`);
-
-
