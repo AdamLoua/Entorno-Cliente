@@ -41,6 +41,58 @@
                 console.log(`Buenos dias, don ${nombre}`);
             }
         );
+
+        /*
+        crear una funcion llamada operar que reciba tres argumentos: dos nuemros y una funcion que indique que operacion debe realizarse con ellos.
+        
+        la funcion operar debe ejecutar la funcion recibida y mostrar el resultado por consola.
+        
+        realiza una llamada a operar pasando los numeros 8 y 5, junto con una funcion anonima que calcule la suma de ambos*/
+
+        //funcion principal
+        function operar(num1, num2, funci){
+            console.log(funci(num1,num2));
+        }
+
+        operar(2,4,
+            function summ(a,b){
+                return a+b;
+            }
+        );
+
+        operar(2,4,
+            function mult(a,b){
+                return a*b;
+            }
+        );
+
+        operar(3,4,
+            function elev2(a,b){
+                return a**a;
+            }
+        );
+
+
+        //funcion flecha
+        //crea una funcion que divida dos numeros 
+        const dividi = (a,b) => a/b;
+
+        console.log(dividi(1,2));
+
+        //con llaves
+        const dividi2 = (a,b) =>{
+            return a/b;
+        }
+        console.log(dividi2(9,3));
+
+        //funcion flecha que triplique un numero
+        let trp = n => n**3;
+        console.log(trp(2));
+
+        //funcion que te salude por la noche
+
+        var bn = () => console.log("Buenas noches,mama");
+        bn();
     </script>
 </body>
 </html>
