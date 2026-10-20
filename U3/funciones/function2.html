@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>definicion y utilizacion de funciones</title>
+</head>
+<body>
+    <script>
+        function iva(precio, iva){
+            return precio+(precio*iva/100);
+        }
+
+        console.log(iva(100,16));
+
+        //Función por expresión - asignación
+        const nose = function iva(precio, iva){
+            return precio+(precio*iva/100);
+        }
+
+        console.log(nose(100,16));
+
+        /*
+            crear una funcion por expresion utilizada como argumento
+            esta funcion debera imprimir un saludo junto con el nombre de una persona que se encuentra en la funcion principal
+
+            funcion callback es la utilizada como argumento
+            funcion principal recibe la funcion  como argumento
+
+        */
+
+        //ekjemplo de funcion por expresion como argumento
+        //funcion principal
+        function carlos (callback){
+            callback("Carlos");
+        }
+
+        //function callback
+        carlos(
+            function saludo(nombre){
+                console.log(`Buenos dias, don ${nombre}`);
+            }
+        );
+    </script>
+</body>
+</html>
