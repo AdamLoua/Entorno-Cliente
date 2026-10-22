@@ -93,6 +93,18 @@
 
         var bn = () => console.log("Buenas noches,mama");
         bn();
+
+        //recursividad
+        function funci(n,e){
+
+            if (e === 0) return 1;
+
+            return n * funci(n, e - 1);
+        }
+
+        console.log(funci(2,2));
+
+    
     </script>
 </body>
 </html>
