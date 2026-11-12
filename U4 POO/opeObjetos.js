@@ -51,3 +51,47 @@ tortillaPatatas.dameIngredientes = function(){
 tortillaPatatas.dameIngredientes();
 console.log(tortillaPatatas.getTipo());
 
+//object.prototype --> prototipo por defecto
+
+/*const pepe = Object.create(persona) persona es un objeto*/
+
+//object.prototype
+const ord1 = {
+    cpu: "i5 9550",
+    ram: "DDR4 8GB",
+    getDatos: function(){
+        return "CPU: "+this.cpu+" , RAM: "+this.ram;
+    }
+}
+
+console.log(ord1.getDatos());
+
+console.log(ord1.hasOwnProperty("cpu"));
+
+console.log(ord1.getPrototypeOf(ord1) === Object.prototype);
+
+/*Herencia con prototipo personalizado
+crea el objeto usu1 que contenga las propiedades
+nombre
+fecha nacimiento
+y el metodo getDatPers que debe devolverlos
+
+El objeto usu1 debe estar basado en otro objeto llamado cliente
+ademas, usu1 es un cliente VIP, por lo que tendria una propiedad descuento con valor 15
+Crea el usuario USU2 basado en cliente. Este usuario no es VIP
+propiedades nombre fechanacimiento
+metodo getDatos*/
+
+const cliente = {
+    nombre: "cliente",
+    fechaNacimiento: "01-01-1999",
+    getDatos: function(){
+        return this.nombre+" "+this.fechaNacimiento;
+    }
+}
+
+const usu1 = Object.create(cliente);
+usu1.descuento = 15;
+
+const usu2 = Object.create(cliente);
+
